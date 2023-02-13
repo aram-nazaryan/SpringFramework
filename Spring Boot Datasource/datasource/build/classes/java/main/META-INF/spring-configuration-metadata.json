@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "datasource",
+      "type": "com.sourcemind.data.DataSourceConfigurationProperties",
+      "sourceType": "com.sourcemind.data.DataSourceConfigurationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "datasource.password",
+      "type": "java.lang.String",
+      "sourceType": "com.sourcemind.data.DataSourceConfigurationProperties"
+    },
+    {
+      "name": "datasource.url",
+      "type": "java.lang.String",
+      "sourceType": "com.sourcemind.data.DataSourceConfigurationProperties"
+    },
+    {
+      "name": "datasource.username",
+      "type": "java.lang.String",
+      "sourceType": "com.sourcemind.data.DataSourceConfigurationProperties"
+    }
+  ],
+  "hints": []
+}

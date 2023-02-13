@@ -1,0 +1,15 @@
+Create a multimodule application that contains core and datasource modules.
+
+In datasource module create a DataSourceConfigurationProperties that contains
+datasource url, username, and password properties.
+Create a configuration class in datasource module that configures the datasource bean.
+
+Add datasource module as a dependency in the core module.
+
+In core application.properties by using autocomplete fill in the datasource property values
+In core module create a simple spring boot application that after context refreshed event
+creates a users table if not exists and inserts one user having a random username.
+
+note:
+Use JDBC API to execute sql statements.
+the datasource module configuration must be automatically detected by the core module
