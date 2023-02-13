@@ -1,0 +1,4 @@
+rootProject.name = 'product_management'
+include 'users'
+include 'core'
+
