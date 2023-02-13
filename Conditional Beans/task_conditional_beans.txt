@@ -1,0 +1,23 @@
+Create a spring boot application that periodically checks and prints the weather temperature
+from either Google or Amazon servers.
+
+the weather server should be defined in application.properties file
+
+e.g
+weather.server=GOOGLE
+
+the application must print the following logs:
+Checking weather temperature from google server...
+The temperature is: 15C
+
+e.g
+weather.server=AMAZON
+
+the application must print the following logs:
+Checking weather temperature from amazon server...
+The temperature is: 20C
+
+note:
+Create TemperatureChecker interface and 2 concrete implementations
+At any point in time, there must be only 1 TemperatureChecker bean in IOC container
+Use @Scheduled annotation to check the temperature every 5 seconds
