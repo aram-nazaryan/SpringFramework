@@ -1,0 +1,19 @@
+Create a loyalty program application that gives 5% cashback on each purchase.
+
+Create a UserController that has registration (POST /users) and user retrieval (GET /users/{uuid}) endpoints
+
+The user details should return username, user UUID, last order details (list of last 10 orders), and cashback bonus amount since the user creation date (it does not matter if the cashback bonus is used or not).
+
+The User JPA entity should contain the id, UUID, username, password (kept as plain text), and list of orders. Equals, hashCode, and toString methods should be properly implemented
+
+Create a PaymentController that has a make payment endpoint (POST /payments). POST /payments endpoint takes user UUID, payment total amount (BigDecimal), and orderDescription.
+
+e.g. {"userUuid": "5894ca96-a1f6-44e0-88d3-f3576171a7fa", "totalAmount": "2500.00", "Grand Candy 1KG & 2 white papers"}
+
+For each payment, the system should persist an Order with the order description, total amount, and user.
+
+The application does not yet support cashback usage for new payments
+
+Handle the cases when user with the provided username already exists, when a user does not exist to make payment when payment total amount is less than 0
+
+Write unit tests for service and facade layers.
