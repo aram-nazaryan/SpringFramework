@@ -1,0 +1,56 @@
+create queue management web application.
+
+There must be 2 pages: one for ticket creation, and another one for ticket consumption.
+
+The ticket creation JSP page looks like this:
+
+-----------------------------------------------
+|         Welcome to queue management system  |
+|                			                  |
+|              X people are waiting           |
+|                                             |
+|                ---------------              |
+|		        |create a ticket|             |
+|                ---------------              |
+|				                     	      |
+|---------------------------------------------|
+
+
+After clicking on to 'create a ticket' button, the user should see the ticket number at the bottom of the button.
+
+The ticket number should contain the following symbols 0,1,..,9,A,..,F
+
+The first ticket number must be A000
+Here is a sequence of consecutive tickets: A001, ..., A009, A00A, A00B
+
+The ticket consumption JSP page looks like this:
+
+-----------------------------------------------
+|         Welcome to queue management system  |
+|                			                  |
+|              X people are waiting           |
+|                                             |
+|                ----------------             |
+|		        |consume a ticket|            |
+|                ----------------             |
+|					                          |
+|---------------------------------------------|
+
+After clicking on to 'create a ticket' button, the user should see the ticket number at the bottom of the button.
+If there are no more tickets, the button should disappear (it should appear after the page refresh if there are active tickets)
+
+All tickets must be recorded in postgres relational database. Communication with the database must be established using Hikari connection pool and JDBC API.
+
+p.s.
+Create a TicketRepository interface that has the following methods
+
+Ticket save(Ticket ticket);
+int countByActiveIsTrue();
+void consume(Long ticketId); //mark the ticket as inactive
+
+Create PooledJDBCTicketRepository singleton concrete implementation that uses Hikari connection pooling and implements abstract methods using JDBC API.
+
+Use a singleton repository in servlet to execute required actions. 
+
+
+
